@@ -1,0 +1,12 @@
+# Python 3.14. These are the exact versions the published figures and metrics were checked with.
+#
+# This installs the CPU build of torch on Windows. For a GPU, first install a CUDA build of
+# torch using the command for your system from https://pytorch.org/get-started/locally/
+torch==2.13.0
+numpy==2.5.2
+scipy==1.18.1
+pandas==3.1.1
+scikit-learn==1.9.1
+matplotlib==3.11.1
+pillow==12.3.0
+h5py==3.16.0

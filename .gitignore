@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+.venv/
+.Rhistory
+
+# Only a 3-scenario sample of the dataset is distributed (see data/README.md)
+data/*
+!data/README.md
+*.npz
+!data/sample_3_scenarios.npz
+
+# Only the two final checkpoints are kept in the repository
+*.pth
+!checkpoints/model_a/best.pth
+!checkpoints/model_b/best.pth
+
+# Training logs, except the one behind Fig. 2
+*.jsonl
+!results/logs/fig2_representative_run.jsonl
+run_log*.txt
+
+# Regenerated when the figure scripts run
+results/figures/panels/
+results/figures/field_maps/
+results/uq/
+results/metrics/*.npy
+results/metrics/*.pkl
+results/metrics/*_sample_results.json
+
+Written_Report_Final_Draft.md
+Written_Report_Final_Draft.docx

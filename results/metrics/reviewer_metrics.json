@@ -1,0 +1,274 @@
+{
+ "test_set": {
+  "relative_error_epsilon": "1e-8 in the unit of each quantity",
+  "field": {
+   "T_MAE_K": 0.9159816256409643,
+   "T_RMSE_K": 1.651521611144645,
+   "P_MAE_MPa": 0.018740238045997053,
+   "P_RMSE_MPa": 0.038207895953471786,
+   "cooled_cells_pct_of_valid": 11.026577905273662,
+   "T_MAE_cooled_cells_K": 2.994647227019427,
+   "T_error_pct_of_cooling_signal": 8.312282936439178,
+   "P_change_MAE_MPa": 0.010940117750271844,
+   "P_change_error_pct_of_change": 60.12609661250423
+  },
+  "persistence_baseline": {
+   "T_MAE_K": 4.017916334616196,
+   "T_MAE_cooled_cells_K": 36.0267720663305,
+   "P_MAE_MPa": 0.01617359126773975,
+   "P_change_MAE_MPa": 0.01819529017620722,
+   "share_of_later_T_error_in_cooled_cells_pct": 98.87015452323425,
+   "ModelA_share_of_later_T_error_in_cooled_cells_pct": 39.17691036995818
+  },
+  "wells": {
+   "Tprod_MAE_K": 0.9469856023788452,
+   "Tprod_worst_K": 12.521453857421875,
+   "Pinj_MAE_MPa": 2.216402053833008,
+   "Pinj_worst_MPa": 21.236770629882812,
+   "Pprod_MAE_MPa": 0.7802680730819702,
+   "Pprod_worst_MPa": 8.758818626403809,
+   "Pprod_MAE_excl_real_01051_MPa": 0.750025749206543,
+   "dP_MAE_MPa": 2.3987019062042236,
+   "cooling_40yr_true_median_K": 4.9132843017578125,
+   "cooling_40yr_MAE_K": 1.2600750923156738,
+   "thermal_power_MAE_MW": 0.29100853204727173,
+   "thermal_power_error_pct": 1.2164901494979858
+  },
+  "physics_residuals_mean": {
+   "COMSOL": {
+    "mass": 0.5137120337578757,
+    "energy": 0.003455645790632718
+   },
+   "Model A": {
+    "mass": 0.5624274276196957,
+    "energy": 0.0036468687954013526
+   },
+   "Model B": {
+    "mass": 0.20949862743246145,
+    "energy": 0.0013470324202930427
+   }
+  }
+ },
+ "ensemble": {
+  "decline_pct": {
+   "COMSOL_P10_P50_P90": [
+    0.09128825068473817,
+    1.3151521682739258,
+    2.993080711364747
+   ],
+   "surrogate_P10_P50_P90": [
+    0.08433666974306107,
+    1.2847731113433838,
+    3.002645111083985
+   ],
+   "COMSOL_max": 5.6689605712890625,
+   "surrogate_max": 4.917209148406982,
+   "per_scenario_MAE_all": 0.2151177078485489,
+   "per_scenario_MAE_test": 0.31951233744621277
+  },
+  "decline_K": {
+   "COMSOL_P10_P50_P90": [
+    0.37007446289062507,
+    5.241058349609375,
+    12.001544189453128
+   ],
+   "surrogate_P10_P50_P90": [
+    0.326068115234375,
+    5.031463623046875,
+    11.964099121093756
+   ],
+   "COMSOL_max": 22.712188720703125,
+   "surrogate_max": 19.677734375,
+   "per_scenario_MAE_all": 0.8524721264839172,
+   "per_scenario_MAE_test": 1.2600750923156738
+  },
+  "decline_usable_pct": {
+   "COMSOL_P10_P50_P90": [
+    0.4569390118122101,
+    6.431398868560791,
+    15.104400444030762
+   ],
+   "surrogate_P10_P50_P90": [
+    0.4309475958347321,
+    6.403402805328369,
+    14.707135009765626
+   ],
+   "COMSOL_max": 25.704166412353516,
+   "surrogate_max": 29.83716583251953,
+   "per_scenario_MAE_all": 1.0700651407241821,
+   "per_scenario_MAE_test": 1.6278159618377686
+  },
+  "capacity_y40_MW": {
+   "COMSOL_P10_P50_P90": [
+    14.9658634185791,
+    22.391666412353516,
+    32.392275238037115
+   ],
+   "surrogate_P10_P50_P90": [
+    14.98422794342041,
+    22.307418823242188,
+    32.22841186523438
+   ],
+   "COMSOL_max": 46.94919967651367,
+   "surrogate_max": 46.594425201416016,
+   "per_scenario_MAE_all": 0.253425657749176,
+   "per_scenario_MAE_test": 0.4207884669303894
+  },
+  "cum_energy_GJ": {
+   "COMSOL_P10_P50_P90": [
+    19793220.24785108,
+    29664236.740507774,
+    43077636.12207792
+   ],
+   "surrogate_P10_P50_P90": [
+    19787759.158206657,
+    29504276.076107487,
+    42882827.79535433
+   ],
+   "COMSOL_max": 61094073.60463513,
+   "surrogate_max": 60705595.65865292,
+   "per_scenario_MAE_all": 176611.14215628937,
+   "per_scenario_MAE_test": 318398.1272338655
+  },
+  "dP_y40_MPa": {
+   "COMSOL_P10_P50_P90": [
+    9.782475662231445,
+    19.820152282714844,
+    38.02328262329102
+   ],
+   "surrogate_P10_P50_P90": [
+    9.776169586181641,
+    19.556102752685547,
+    36.85770874023438
+   ],
+   "COMSOL_max": 95.35081481933594,
+   "surrogate_max": 97.73452758789062,
+   "per_scenario_MAE_all": 1.1154100894927979,
+   "per_scenario_MAE_test": 2.415767192840576
+  },
+  "surrogate_decline_classes": {
+   "below_2": 1063,
+   "2_to_4": 449,
+   "4_to_6": 23,
+   "6_or_more": 0
+  },
+  "screening": {
+   "decline_over_10pct": {
+    "COMSOL": 0,
+    "surrogate": 0
+   },
+   "usable_decline_over_10pct": {
+    "COMSOL": 465,
+    "surrogate": 463,
+    "misclassified": 78
+   },
+   "usable_decline_over_20pct": {
+    "COMSOL": 21,
+    "surrogate": 23,
+    "misclassified": 14
+   }
+  },
+  "apparent_warming": {
+   "surrogate_count": 110,
+   "COMSOL_count": 38,
+   "surrogate_min_pct": -0.8092188239097595,
+   "COMSOL_min_pct": -0.10195879638195038,
+   "max_endpoint_error_K_in_those": 3.61102294921875
+  },
+  "decline_correlation_with_inputs": {
+   "COMSOL": {
+    "variance": 0.03436062277813349,
+    "corr_x": 0.037819800836969016,
+    "corr_y": 0.02010149551890072,
+    "corr_z": 0.04351127089495427,
+    "nugget": 0.015735786091248278,
+    "phi0": -0.04816908197579784,
+    "c_compaction": -0.008820986663655885,
+    "grad_C_per_km": 0.10572177450395893,
+    "cp_rock": -0.020502944005433538,
+    "H": -0.2885936080209816,
+    "inj_rate": 0.34632535242562557,
+    "inj_temp": -0.09344953234213942,
+    "well_spacing": -0.7896078463486448
+   },
+   "surrogate": {
+    "variance": 0.013044139415801672,
+    "corr_x": 0.027518517994348953,
+    "corr_y": 0.03303529310615876,
+    "corr_z": 0.05060587705959187,
+    "nugget": 0.007926309629028381,
+    "phi0": -0.08180117338196533,
+    "c_compaction": 0.0024163840792966657,
+    "grad_C_per_km": 0.11527990868826402,
+    "cp_rock": -0.027656533420435437,
+    "H": -0.3284891057416543,
+    "inj_rate": 0.32454291361529386,
+    "inj_temp": -0.09533853834330762,
+    "well_spacing": -0.7832385729178275
+   }
+  }
+ },
+ "stabilization": {
+  "P_inj": {
+   "median_fraction_of_40yr_change_reached": {
+    "0.2yr": 0.8645536303520203,
+    "1.0yr": 0.9292213320732117,
+    "2.0yr": 0.9493135213851929,
+    "5.0yr": 0.9706577658653259
+   },
+   "years_to_stay_within_0.5MPa_median_P90": [
+    1.0,
+    3.4000000953674316
+   ]
+  },
+  "P_prod": {
+   "median_fraction_of_40yr_change_reached": {
+    "0.2yr": 0.0006648159469477832,
+    "1.0yr": 0.003763335756957531,
+    "2.0yr": 0.007165822666138411,
+    "5.0yr": 0.016800349578261375
+   },
+   "years_to_stay_within_0.5MPa_median_P90": [
+    0.0,
+    25.0
+   ]
+  }
+ },
+ "mask_erosion": {
+  "all_median_min_pct": [
+   80.0,
+   50.0
+  ],
+  "by_thickness_median_min_pct": {
+   "100-150 m": [
+    66.66666666666667,
+    50.0
+   ],
+   "150-200 m": [
+    75.0,
+    75.0
+   ],
+   "200-250 m": [
+    80.0,
+    80.0
+   ],
+   "250-301 m": [
+    85.71428571428571,
+    83.33333333333333
+   ]
+  }
+ },
+ "timing": {
+  "device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "batch1_ms_per_scenario_mean_min_max": [
+   47.81556307471121,
+   47.769529310338335,
+   47.905519396549764
+  ],
+  "batch2_ms_per_scenario_mean_min_max": [
+   45.805516091954864,
+   45.730047413795106,
+   45.90148448275989
+  ]
+ }
+}

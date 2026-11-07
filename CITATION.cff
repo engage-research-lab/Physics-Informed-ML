@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Physics-Informed-ML: surrogate models for 3D geothermal reservoir simulation"
+type: software
+authors:
+  - family-names: Alvarado
+    given-names: A.
+  - family-names: Sharma
+    given-names: A.
+  - family-names: Moynihan
+    given-names: P.
+date-released: 2026-11-06
+license: GPL-3.0-only
+repository-code: "https://github.com/engage-research-lab/Physics-Informed-ML"
