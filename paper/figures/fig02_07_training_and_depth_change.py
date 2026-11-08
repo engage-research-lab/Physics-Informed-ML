@@ -51,10 +51,10 @@ def change_heatmap(field, mask, valid, n_z):
     return grid
 
 
-A = json.load(open(os.path.join(OUT, '..', 'metrics', 'model_a_test_results.json')))
-ids = A['per_scenario']['sample_id']
+raw = np.load(PREPARED_DATA_PATH, allow_pickle=True)
+ids = [str(raw['sample_id'][i]) for i in raw['test_idx']]
 ds = ComsolFnoDataset(PREPARED_DATA_PATH, split='test')
-z_m = np.load(PREPARED_DATA_PATH, allow_pickle=True)['z_m']
+z_m = raw['z_m']
 years = np.arange(0, 41, 5)
 fig, axes = plt.subplots(3, 2, figsize=(6.8, 7.6), layout='constrained')
 for r, sid in enumerate(['real_00008', 'real_01456', 'real_01528']):

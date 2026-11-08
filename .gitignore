@@ -3,11 +3,11 @@ __pycache__/
 .venv/
 .Rhistory
 
-# Only a 3-scenario sample of the dataset is distributed (see data/README.md)
+# Only a 4-scenario sample of the dataset is distributed (see data/README.md)
 data/*
 !data/README.md
 *.npz
-!data/sample_3_scenarios.npz
+!data/sample_scenarios.npz
 
 # Only the two final checkpoints are kept in the repository
 *.pth

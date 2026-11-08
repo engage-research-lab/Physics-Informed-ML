@@ -9,6 +9,8 @@ authors:
     given-names: A.
   - family-names: Moynihan
     given-names: P.
-date-released: 2026-11-06
+  - family-names: Ezekiel
+    given-names: J.
+date-released: 2026-11-07
 license: GPL-3.0-only
 repository-code: "https://github.com/engage-research-lab/Physics-Informed-ML"

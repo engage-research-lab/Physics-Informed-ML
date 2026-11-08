@@ -18,14 +18,21 @@ pip install -r requirements.txt
 python scripts/reproduce_figures.py --figures 3 4 10
 ```
 
-This regenerates Figs. 3, 4 and 10 in `results/figures/` from the saved metrics, in under a minute. To run both trained models on the 3 sample scenarios included in `data/`:
+This regenerates Figs. 3, 4 and 10 in `results/figures/` from the saved metrics, in under a minute.
+
+### Testing with the sample data
+
+`data/` includes 4 test scenarios, the ones shown in the paper's figures. With them, a reviewer can run both trained models and regenerate most of the paper's figures without downloading anything:
 
 ```bash
-python scripts/evaluate.py --model A --sample
+python scripts/evaluate.py --model A --sample     # a few seconds
 python scripts/evaluate.py --model B --sample
+python scripts/reproduce_figures.py --sample      # under a minute
 ```
 
-Everything else needs the full prepared dataset, which is available on request (see [data/README.md](data/README.md)):
+The evaluation prints each scenario's errors next to the published test-set values; on a CPU they agree to 3 or 4 significant digits. The figure command regenerates Figs. 2-10 (except 5b), A2 and A3, identical to the published ones. See [data/README.md](data/README.md) for details.
+
+The remaining figures and the test-set totals need the full prepared dataset, which is available on request:
 
 ```bash
 python scripts/evaluate.py --model A       # test-set metrics for Model A (or --model B)
@@ -52,7 +59,7 @@ src/          model_a (architecture, training, evaluation, ensemble analysis, pl
               data_preparation (raw COMSOL export -> prepared dataset)
 paper/        Analyses behind the paper's numbers, figure scripts, graphical abstract
 checkpoints/  Final weights: model_a/best.pth (epoch 109), model_b/best.pth (epoch 99)
-data/         3-scenario sample; the full dataset goes here (available on request)
+data/         4-scenario sample; the full dataset goes here (available on request)
 results/      Saved metrics, the training log behind Fig. 2, and the figures
 ```
 
@@ -64,15 +71,15 @@ results/      Saved metrics, the training log behind Fig. 2, and the figures
 
 | Figure | Script in `paper/figures/` | Needs |
 |---|---|---|
-| 2, 7 | `fig02_07_training_and_depth_change.py` | dataset |
+| 2, 7 | `fig02_07_training_and_depth_change.py` | sample or full dataset |
 | 3, 4, 10 | `fig03_04_10_error_distributions.py` | nothing extra |
-| 5a | `fig05a_real_01051.py` | dataset |
-| 5b | `fig05b_error_vs_initial_pressure.py` | dataset |
-| 6 | `fig06_3d_fields.py` | dataset |
-| 8, 9, A2, A3 | `fig08_09_A2_A3_depth_galleries.py` | dataset |
-| 11, 12 | `fig11_12_ensemble.py` | dataset, ensemble run |
-| 13 | `fig13_controls.py` | dataset, ensemble run |
-| A1 | `figA1_well_trajectories.py` | dataset |
+| 5a | `fig05a_real_01051.py` | sample or full dataset |
+| 5b | `fig05b_error_vs_initial_pressure.py` | full dataset |
+| 6 | `fig06_3d_fields.py` | sample or full dataset |
+| 8, 9, A2, A3 | `fig08_09_A2_A3_depth_galleries.py` | sample or full dataset |
+| 11, 12 | `fig11_12_ensemble.py` | full dataset, ensemble run |
+| 13 | `fig13_controls.py` | full dataset, ensemble run |
+| A1 | `figA1_well_trajectories.py` | full dataset |
 
 Fig. 1 is a schematic with no script. The ensemble run (`fig11_13_capture_ensemble.py`) starts automatically when Figs. 11-13 are requested and its output is missing.
 
@@ -122,7 +129,7 @@ This repository is released under the GNU General Public License v3.0, the licen
 ## Citation
 
 ```
-Alvarado, A., Sharma, A., & Moynihan, P. (2026). Physics-Informed-ML: Surrogate models
-for 3D geothermal reservoir simulation [Source code]. GitHub.
-https://github.com/engage-research-lab/Physics-Informed-ML
+Alvarado, A., Sharma, A., Moynihan, P., Ezekiel, J. 2026. Physics-Informed-ML: surrogate models
+for 3D geothermal reservoir simulation [source code]. GitHub.
+https://github.com/engage-research-lab/Physics-Informed-ML.
 ```
